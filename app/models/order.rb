@@ -7,4 +7,8 @@ class Order < ActiveRecord::Base
 
   validates :stripe_charge_id, presence: true
 
+  def calculate_total
+    (total_cents / 100.0).round(2)
+  end
+
 end
