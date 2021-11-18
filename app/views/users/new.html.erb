@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="text-center">Sign Up</h2>
+    </br>
+    <div class="box container-fluid">
+    <%= form_for :user, url: '/users' do |f| %>
+      <ul class="list-unstyled container">
+
+     <li class="container text-center"> First Name: <%= f.text_field :first_name %> </li>
+     </br>
+     <li class="container text-center" >  Last Name: <%= f.text_field :last_name %> </li>
+     </br>
+     <li class="container text-center"> Email: <%= f.text_field :email %> </li>
+     </br>
+     <li class="container text-center">  Password: <%= f.password_field :password %> </li>
+     </br>
+     <li class="container text-center">  Confirm Password: <%= f.password_field :password_confirmation %> </li>
+     </br>
+     <li class="text-center">  <%= f.submit "Submit" %> </li>
+      </ul>
+    <% end %>
+    </div>
+  </div>
+</div>
