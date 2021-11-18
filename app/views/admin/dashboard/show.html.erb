@@ -4,10 +4,32 @@
 
 <h1>Admin::Dashboard</h1>
 
-<header class="page-header">
-  Categories Present: <%= @categories %>
-</header>
 
-<header class="page-header">
-  Products Present: <%= @products %>
-</header>
+<div class="panel panel-default">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2">Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= link_to "Product", admin_products_path %> count
+        </td>
+        <td class="expand">
+          <%= @product_count %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Category count
+        </td>
+        <td>
+          <%= @category_count %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
