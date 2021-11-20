@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_reader :name
+  # attr_reader :name
   monetize :price_cents, numericality: true
   mount_uploader :image, ProductImageUploader
 
