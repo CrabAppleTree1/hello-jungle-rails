@@ -16,6 +16,11 @@ require "capybara/poltergeist" # Add this line to require poltergeist
 # that JS driver to :poltergeist
 Capybara.javascript_driver = :poltergeist
 
+
+# Helper function to open product images
+def open_asset(file_name)
+  File.open(Rails.root.join('db', 'seed_assets', file_name))
+end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
